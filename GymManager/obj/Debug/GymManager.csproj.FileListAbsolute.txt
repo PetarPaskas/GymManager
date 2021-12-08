@@ -76,4 +76,3 @@ C:\Users\Petar\source\repos\GymManager\GymManager\obj\Debug\GymManager.csproj.Co
 C:\Users\Petar\source\repos\GymManager\GymManager\obj\Debug\GymManager.csproj.CopyComplete
 C:\Users\Petar\source\repos\GymManager\GymManager\obj\Debug\GymManager.dll
 C:\Users\Petar\source\repos\GymManager\GymManager\obj\Debug\GymManager.pdb
-C:\Users\Petar\source\repos\GymManager\GymManager\obj\Debug\GymManager.csproj.AssemblyReference.cache
