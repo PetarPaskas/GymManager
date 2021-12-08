@@ -1,0 +1,29 @@
+﻿@model GymManager.Models.Base.Class.MembershipType
+@{
+    ViewBag.Title = "Edit membership";
+}
+
+<h2>Edit membership type</h2>
+
+@using (Html.BeginForm("ResolveMembershipType", "Members"))
+{
+    <div class="form-group">
+        @Html.LabelFor(m => m.Name, "Membership type")
+        @Html.TextBoxFor(m => m.Name, new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.Discount, "Discount(in percentages)")
+        @Html.EditorFor(m => m.Discount, new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.PricePerMonth, "Price per month")
+        @Html.EditorFor(m => m.PricePerMonth, new { @class = "form-control" })
+    </div>
+
+    @Html.HiddenFor(m=>m.Id)
+
+    <button class="btn btn-primary">Submit</button>
+}
+

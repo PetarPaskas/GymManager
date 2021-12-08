@@ -1,7 +1,39 @@
-﻿
+﻿@model GymManager.ViewModels.FormMemberViewModel
 @{
-    ViewBag.Title = "MemberForm";
+    ViewBag.Title = Model.FormTitle;
 }
 
-<h2>MemberForm</h2>
+<h2>@Model.FormTitle</h2>
+
+@using (Html.BeginForm("ResolveForm","Members"))
+{
+    <div class="form-group">
+        @Html.LabelFor(m => m.Member.Name, "Name")
+        @Html.TextBoxFor(m => m.Member.Name, new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.Member.Age, "Age")
+        @Html.EditorFor(m => m.Member.Age, new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.Member.IsActiveMember, "Is still a member?")
+        @Html.CheckBoxFor(m => m.Member.IsActiveMember, new { @class = "form-check-input" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.Member.LastsUntil, "Lasts until")
+        @Html.TextBoxFor(m => m.Member.LastsUntil, new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.MembershipTypeId, "Type of membership")
+        @Html.DropDownListFor(m => m.MembershipTypeId,new SelectList(Model.MembershipTypes,"Id","Name"),"Select a membership type", new { @class="form-control"})
+    </div>
+
+    @Html.HiddenFor(m=>m.Member.Id)
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+}
 

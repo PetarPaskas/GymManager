@@ -1,0 +1,14 @@
+﻿
+<nav style="background-color: #444 " class="navbar bg-dar navbar-fixed-top">
+    <div class="navbar-header">
+        <img class="navbar-brand" src="~/Content/img/navbar-brand.png" style="width:80px" />
+    </div>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="nav navbar-nav">
+            <li>@Html.ActionLink("Shop", "Index", "Shop", null, new { @class = "nav-item nav-link btn btn-outline-info" })</li>
+            <li>@Html.ActionLink("Members", "Index", "Members", null, new { @class = "nav-item btn nav-link btn-outline-info" })</li>
+            <li>@Html.ActionLink("Membership Types", "MembershipTypeIndex", "Members", null, new { @class = "nav-item nav-link btn btn-outline-info" })</li>
+        </ul>
+    </div>
+</nav>

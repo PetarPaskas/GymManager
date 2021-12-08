@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace GymManager.Models.Users
 {
-        public interface IMember
+        public interface IMember : IUser
         {
             bool IsActiveMember { get; set; }
             DateTime DateJoined { get; set; }

@@ -72,8 +72,8 @@ C:\Users\Petar\source\repos\GymManager\GymManager\bin\System.Web.WebPages.Razor.
 C:\Users\Petar\source\repos\GymManager\GymManager\bin\Newtonsoft.Json.xml
 C:\Users\Petar\source\repos\GymManager\GymManager\bin\Antlr3.Runtime.pdb
 C:\Users\Petar\source\repos\GymManager\GymManager\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\Petar\source\repos\GymManager\GymManager\obj\Debug\GymManager.csproj.AssemblyReference.cache
 C:\Users\Petar\source\repos\GymManager\GymManager\obj\Debug\GymManager.csproj.CoreCompileInputs.cache
 C:\Users\Petar\source\repos\GymManager\GymManager\obj\Debug\GymManager.csproj.CopyComplete
 C:\Users\Petar\source\repos\GymManager\GymManager\obj\Debug\GymManager.dll
 C:\Users\Petar\source\repos\GymManager\GymManager\obj\Debug\GymManager.pdb
+C:\Users\Petar\source\repos\GymManager\GymManager\obj\Debug\GymManager.csproj.AssemblyReference.cache

@@ -1,7 +1,32 @@
-﻿
+﻿@model GymManager.ViewModels.IndexMoviesViewModel
 @{
-    ViewBag.Title = "MembersIndex";
+    ViewBag.Title = "Gym Members";
 }
 
-<h2>MembersIndex</h2>
+<h2>List of all members</h2>
 
+@Html.ActionLink("New","Form","Members",null ,new { @class="btn btn-primary"})
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Date Joined</th>
+            <th scope="col">Lasts Until</th>
+            <th scope="col">Membership Type</th>
+            <th scope="col"></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var member in Model.Members)
+            {
+                <tr>
+                    <td>@member.Name</td>
+                    <td>@member.DateJoined.ToString("D")</td>
+                    <td>@member.LastsUntil.ToString("D")</td>
+                    <td>@member.MembershipType.Name</td>
+                    <td>@Html.ActionLink("Edit","Form","Members",new { Id = member.Id},new { @class="btn btn-warning"})</td>
+                </tr>
+            }
+    </tbody>
+</table>

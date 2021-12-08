@@ -69,7 +69,7 @@ namespace GymManager.Models
         {
             return new List<MembershipType>() 
             { 
-                new MembershipType{ Id=1,Name="Basic Membership",Discount=1,PricePerMonth=2000,Benefits=null},
+                new MembershipType{ Id=1,Name="Basic Membership",Discount=1,PricePerMonth=2000,Benefits=new List<Benefit>(){ new Benefit() { Id = -1, BenefitDescription = "No benefits"} } },
                 new MembershipType{ Id=2,Name="Silver Membership",Discount=0.9,PricePerMonth=2500,Benefits=GetSilverBenefits()},
                 new MembershipType{ Id=3,Name="Gold Membership",Discount=0.8,PricePerMonth=3200,Benefits=GetGoldBenefits()},
                 new MembershipType{ Id=4,Name="Platinum Membership",Discount=0.7,PricePerMonth=4000,Benefits=GetPlatinumBenefits()}
@@ -116,7 +116,8 @@ namespace GymManager.Models
                     Description="Protein filled candy bar with peanuts, 20g of protein",
                     IsOnDiscount=false,
                     Name="ProteinBarzzz",
-                    Price=150
+                    Price=150,
+                    ImagePath = @"../../Content/img/bar-1.png"
                 },
                     
                 new CandyBar()
@@ -125,7 +126,8 @@ namespace GymManager.Models
                     Description="Protein filled candy bar with flax seed, 20g of protein",
                     IsOnDiscount=false,
                     Name="ProteinBarzzz",
-                    Price=150
+                    Price=150,
+                    ImagePath = @"../../Content/img/bar-2.png"
                 },
                 new ProteinPowder()
                 {
@@ -133,7 +135,8 @@ namespace GymManager.Models
                     Description="Vanilla protein powder, 35g per scoop",
                     IsOnDiscount=false,
                     Name="MyProtein",
-                    Price=150
+                    Price=150,
+                    ImagePath = @"../../Content/img/powder-1.png"
                 },
                 new ProteinPowder()
                 {
@@ -141,7 +144,8 @@ namespace GymManager.Models
                     Description="Vanilla protein powder, 35g per scoop",
                     IsOnDiscount=false,
                     Name="MyProtein",
-                    Price=150
+                    Price=150,
+                    ImagePath = @"../../Content/img/powder-2.png"
                 }
             };
         }

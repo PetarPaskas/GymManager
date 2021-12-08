@@ -1,7 +1,34 @@
-﻿
+﻿@model System.Collections.Generic.List<GymManager.ViewModels.IndexShopViewModel>
 @{
-    ViewBag.Title = "ShopIndex";
+    ViewBag.Title = "Shop";
 }
 
 <h2>ShopIndex</h2>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col"></th>
+            <th scope="col"></th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @{
+            for (int i = 0; i < Model.Count; i++)
+            {
+                <tr>
+                    <td>@Html.Partial("_ShopItem", Model[i])</td>
+                    @if (Model[i + 1] != null)
+                     {
+                        <td>@Html.Partial("_ShopItem", Model[i + 1])</td>
+
+                     }
+                </tr>
+                i++;
+            }
+        }
+    </tbody>
+</table>
 

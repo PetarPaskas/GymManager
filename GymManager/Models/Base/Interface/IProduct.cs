@@ -9,7 +9,8 @@ namespace GymManager.Models.Base.Interface
     public interface IProduct
     {
          int Id { get; set; }
-         string Name { get; set; }
+         string ImagePath { get; set; }
+        string Name { get; set; }
          double Price { get; set; }
          bool IsOnDiscount { get; set; }
          string Description { get; set; }

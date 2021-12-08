@@ -1,0 +1,35 @@
+﻿@model System.Collections.Generic.IList<GymManager.Models.Base.Class.MembershipType>
+@{
+    ViewBag.Title = "Memberships";
+}
+
+<h2>Membership types</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Discount</th>
+            <th scope="col">Subscription</th>
+            <th scope="col">Benefits</th>
+            <th scope="col"></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var memType in Model)
+        {
+            <tr>
+                <td>@memType.Name</td>
+                <td>@(memType.Discount*100)%</td>
+                <td>@memType.PricePerMonth din/month</td>
+                <td>
+                    @foreach(var benefit in memType.Benefits)
+                {
+                    <p class="h6">@benefit.BenefitDescription</p>
+                }
+                </td>
+                <td>@Html.ActionLink("Edit", "FormMembershipType", "Members", new { Id = memType.Id }, new { @class = "btn btn-warning" })</td>
+            </tr>
+        }
+    </tbody>
+</table>

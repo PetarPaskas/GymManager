@@ -139,6 +139,9 @@
     <Compile Include="Models\Base\Class\Product.cs" />
     <Compile Include="Models\Base\Class\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\FormMemberViewModel.cs" />
+    <Compile Include="ViewModels\IndexMoviesViewModel.cs" />
+    <Compile Include="ViewModels\IndexShopViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-theme.css" />
@@ -177,10 +180,15 @@
     <Content Include="Views\Products\ProductForm.cshtml" />
     <Content Include="Views\Shop\ShopIndex.cshtml" />
     <Content Include="Views\Members\MembersIndex.cshtml" />
+    <Content Include="Views\Members\MembershipTypeIndex.cshtml" />
+    <Content Include="Views\Members\FormMembershipType.cshtml" />
+    <Content Include="Views\Shared\_Navbar.cshtml" />
+    <Content Include="Views\Shop\ShopForm.cshtml" />
+    <Content Include="Views\Shared\_ShopItem.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="ViewModels\" />
+    <Folder Include="Content\img\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
